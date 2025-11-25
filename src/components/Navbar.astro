@@ -1,0 +1,36 @@
+---
+const navItems = [
+  { name: "Home", href: "#home", active: true },
+  { name: "Proyects", href: "#projects" },
+  { name: "Services and Tecnologies", href: "#services" },
+  { name: "Contact", href: "#contact" },
+];
+---
+
+<header class="fixed top-8 left-0 right-0 z-50 flex justify-center px-4">
+  <nav class="bg-glass/90 backdrop-blur-sm px-8 py-3 rounded-full shadow-soft flex items-center gap-12 border border-white/20">
+    
+    <div class="font-serif font-bold text-xl tracking-wider text-dark-gray opacity-80">
+      vIII.
+    </div>
+
+    <ul class="hidden md:flex items-center gap-2">
+      {navItems.map((item) => (
+        <li>
+          <a 
+            href={item.href}
+            class:list={[
+              "px-6 py-2 rounded-full text-sm font-medium transition-all duration-300",
+              item.active 
+                ? "bg-accent-gray text-white shadow-inner" 
+                : "text-soft-gray hover:text-dark-gray hover:bg-white/40"
+            ]}
+          >
+            {item.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+  </nav>
+</header>

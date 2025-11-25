@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = [
+  {
+    title: "HUVYTAS X NORTON",
+    subtitle: "web page design",
+    description: "Development of the complete visual design for the Norton subscription process via the Huvytas platform. The scope included the creation of Figma mockups, a conceptual brief, and a functional sitemap.",
+    image: "src/assets/Norton.jpeg",
+    reverse: false
+  },
+  {
+    title: "KINASIS Y ASOCIADOS",
+    subtitle: "web page design",
+    description: "Development of the visual design and functional structure for the Kinasis Association website. This involved creating Figma mockups, a conceptual brief, and a sitemap to define the information architecture and navigation flow.",
+    image: "src/assets/kinasis.jpeg",
+    reverse: true 
+  }
+];
+---
+
+<Layout title="Joshua Ramírez | Portfolio">
+  
+  <Navbar />
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 pb-20">
+    
+    <Hero />
+
+    <section id="projects" class="space-y-8">
+      <h2 class="text-2xl font-bold text-gray-400 pl-4">Selected Works</h2>
+      
+      <div class="flex flex-col gap-10">
+        {projects.map((project) => (
+          <ProjectCard 
+            title={project.title}
+            subtitle={project.subtitle}
+            description={project.description}
+            image={project.image}
+            reverse={project.reverse}
+          />
+        ))}
+      </div>
+    </section>
+
+  </main>
+
+</Layout>

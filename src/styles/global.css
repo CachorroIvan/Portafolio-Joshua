@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root {
+  --color-cream: #F3F2EE;
+  --color-glass: #E8E8E3;
+  --color-dark: #2A2A2A;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-dark);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
