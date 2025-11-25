@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import Contact from '../components/Contact.astro';
+import Services from '../components/Services.astro';
 
 const projects = [
   {
@@ -32,7 +33,9 @@ const projects = [
     <Hero />
 
     <section id="projects" class="space-y-8">
-      <h2 class="text-2xl font-bold text-gray-400 pl-4">Selected Works</h2>
+		<div class="pl-4 border-l-4 border-dark-gray/20">
+			<h2 class="text-3xl md:text-4xl font-bold text-dark-gray">Selected Works</h2>
+		</div>
       
       <div class="flex flex-col gap-10">
         {projects.map((project) => (
@@ -45,8 +48,9 @@ const projects = [
           />
         ))}
       </div>
-
+	  <Services />
 	  <Contact />
+	  
     </section>
 
   </main>
