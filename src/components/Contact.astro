@@ -1,0 +1,72 @@
+---
+const inputStyles = `
+  w-full px-6 py-4 rounded-2xl 
+  bg-cream border-transparent 
+  focus:bg-white focus:border-gray-300 focus:ring-0 
+  text-dark-gray placeholder-soft-gray/70
+  transition-all duration-300 ease-in-out
+  outline-none
+`;
+---
+
+<section id="contact" class="py-20 relative">
+  
+  <div class="max-w-4xl mx-auto space-y-12">
+    
+    <div class="space-y-2 text-center md:text-left pl-4">
+      <h2 class="text-2xl font-bold text-gray-400">Contact</h2>
+      <h3 class="text-4xl md:text-5xl font-bold text-dark-gray tracking-tight">Let's work together.</h3>
+    </div>
+
+    <div class="bg-card-bg rounded-4xl p-8 md:p-12 shadow-sm border border-white/60 relative overflow-hidden">
+      
+      <form 
+         action="https://formspree.io/f/xqaolkwk"
+        method="POST"
+        class="space-y-8 relative z-10"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <div class="space-y-2">
+            <label for="name" class="block text-sm font-medium text-dark-gray ml-2">Name</label>
+            <input type="text" name="name" id="name" placeholder="Your Name" class={inputStyles} required />
+          </div>
+
+          <div class="space-y-2">
+            <label for="email" class="block text-sm font-medium text-dark-gray ml-2">Email</label>
+            <input type="email" name="email" id="email" placeholder="your@mail.com" class={inputStyles} required />
+          </div>
+
+        </div>
+        <div class="space-y-2">
+          <label for="subject" class="block text-sm font-medium text-dark-gray ml-2">Subject</label>
+          <input type="text" name="subject" id="subject" placeholder="Project proposal..." class={inputStyles} />
+        </div>
+        <div class="space-y-2">
+          <label for="message" class="block text-sm font-medium text-dark-gray ml-2">Message</label>
+          <textarea 
+            name="message" 
+            id="message" 
+            rows="4" 
+            placeholder="Tell me about your project..." 
+            class={`${inputStyles} resize-none`} 
+            required
+          ></textarea>
+        </div>
+
+
+        <div class="flex justify-center pt-4">
+          <button 
+            type="submit" 
+            class="group relative inline-flex items-center gap-3 px-8 py-4 bg-dark-gray text-white rounded-full text-lg font-medium transition-transform duration-300 hover:scale-[1.02] hover:bg-black shadow-lg shadow-gray-200"
+          >
+            <span>Send Message</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</section>
