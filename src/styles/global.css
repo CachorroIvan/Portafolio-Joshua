@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --color-cream: #F3F2EE;
@@ -10,6 +12,10 @@ body {
   background-color: var(--color-cream);
   color: var(--color-dark);
   text-align: justify;
+}
+
+.header-times {
+  font-family: "Times New Roman", Times, serif;
 }
 
 
