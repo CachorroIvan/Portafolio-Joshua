@@ -10,7 +10,7 @@ interface Props {
 const { title, subtitle, description, image, reverse = false } = Astro.props;
 ---
 
-<article class={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} bg-card-bg rounded-4xl p-6 md:p-8 gap-6 md:gap-8 shadow-sm hover:shadow-md transition-shadow duration-300 items-center`}>
+<article class={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} bg-white/50 backdrop-blur-md rounded-4xl p-6 md:p-8 gap-6 md:gap-8 shadow-sm border border-white/60 hover:shadow-md transition-shadow duration-300 items-center`}>
   
   <div class="flex-1 space-y-3 md:space-y-4">
     <h3 class="font-mono text-lg md:text-xl tracking-widest uppercase text-gray-800 font-bold">

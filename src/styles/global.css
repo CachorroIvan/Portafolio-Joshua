@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --color-cream: #F3F2EE;
@@ -12,7 +14,11 @@ body {
   text-align: justify;
 }
 
+.header-times {
+  font-family: "Times New Roman", Times, serif;
+}
 
 html {
   scroll-behavior: smooth;
 }
+

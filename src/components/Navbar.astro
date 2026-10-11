@@ -4,12 +4,12 @@ const { hash } = Astro.url;
 const navItems = [
   { name: "Home", href: "#home" },
   { name: "Projects", href: "#projects" },
-  { name: "Services and Tecnologies", href: "#services" },
+  { name: "Services/ Tech", href: "#services" },
   { name: "Contact", href: "#contact" },
 ];
 ---
 
-<header class="fixed top-8 left-0 right-0 z-50 flex justify-center px-4">
+<header class="header-times fixed top-8 left-0 right-0 z-50 flex justify-center px-4">
   <nav class="bg-glass/90 backdrop-blur-sm px-10 py-4 rounded-full shadow-soft flex items-center gap-14 border border-white/30 transition-all duration-300 text-left">
     <div class="font-serif font-bold text-xl tracking-wider text-dark-gray opacity-80 select-none">
       vIII.
@@ -24,8 +24,8 @@ const navItems = [
               class:list={[
                 "px-4 py-2 rounded-full transition-all duration-300 relative inline-flex items-center justify-center",
                 isActive
-                  ? "text-dark-gray bg-accent-gray text-white"
-                   : "text-soft-gray hover:text-white hover:bg-[#2A2A2A]/75 hover:backdrop-blur-md hover:border hover:border-white/5 hover:shadow-lg"
+                  ? "bg-accent-gray text-white"
+                  : "text-soft-gray hover:text-white hover:bg-[#2A2A2A]/75 hover:backdrop-blur-md hover:border hover:border-white/5 hover:shadow-lg"
               ]}
             >
               {item.name}
